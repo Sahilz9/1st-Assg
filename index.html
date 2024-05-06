@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #fixed-container {
+        height: 100vh;
+        max-width: 2000px;
+        margin: auto;
+      }
+
+      #fixed-container > .new-look {
+        display: grid;
+        grid-template-areas: "a1 a1 a1 a1 a1 a2";
+      }
+
+      #fixed-container > .new-look > div:nth-of-type(1) {
+        grid-area: a1;
+        height: 100vh;
+        background-color: #333570;
+      }
+
+      #fixed-container > .new-look > div:nth-of-type(2) {
+        grid-area: a2;
+        height: 100vh;
+        background-color: #fde5e6;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/4fd7c245bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <section style="background-color: #ffdad9">
+      <div class="d-flex justify-content-center" style="padding: 3em 0 0 0">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav d-flex" style="gap: 5em">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    style="color: rgb(51, 53, 112); font-weight: 500"
+                    >Our Practice</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    style="color: rgb(51, 53, 112); font-weight: 500"
+                    >The Team</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    ><svg
+                      style="width: 150px; height: 60px; object-fit: cover"
+                      width="200"
+                      height="74"
+                      viewBox="0 0 200 74"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M196.279 72.5581H200V51.1628H196.279V72.5581ZM189.541 72.6678H193.023C192.791 71.7187 192.646 70.5321 192.646 69.0202V61.0728C192.646 57.3656 190.151 55.3488 186.002 55.3488C182.288 55.3488 179.909 56.9207 178.691 59.5895L181.563 61.6956C182.086 59.5308 183.623 58.4925 185.886 58.4925C188.004 58.4925 189.281 59.4419 189.281 61.2506V61.6655L185.103 62.3479C180.373 63.119 178.14 64.957 178.14 68.0709C178.14 71.0363 180.373 73.0233 183.768 73.0233C186.089 73.0233 188.033 72.0453 189.281 70.2947C189.281 71.0363 189.368 71.8964 189.541 72.6678V72.6678ZM189.302 65.8343C189.302 68.1994 186.807 70.2326 184.191 70.2326C182.447 70.2326 181.395 69.3225 181.395 68.0176C181.395 66.5317 182.748 65.7125 186.146 65.1668L189.302 64.6512V65.8343ZM172.305 67.8125V58.4846H175.597V55.7317H172.305V50.6977L168.716 53.5109V55.7317H166.047V58.4846H168.716V68.0486C168.716 71.1875 170.436 73.0233 173.283 73.0233C174.559 73.0233 175.656 72.6683 176.279 72.0468L175.567 69.1151C175.182 69.589 174.5 69.9144 173.817 69.9144C172.809 69.9144 172.305 69.1737 172.305 67.8125V67.8125ZM160.203 72.5581H163.721V61.8318C163.721 57.9131 161.511 55.3488 157.732 55.3488C155.32 55.3488 153.256 56.3809 151.889 58.2369V55.7033H148.372V72.5581H151.889V65.0442C151.889 61.1245 153.837 58.4726 156.715 58.4726C158.895 58.4726 160.203 59.8872 160.203 62.5985V72.5581ZM145.562 64.957C145.856 58.8786 142.711 55.3488 137.712 55.3488C132.713 55.3488 129.302 58.8191 129.302 64.1867C129.302 69.5241 132.713 73.0233 137.712 73.0233C141.211 73.0233 143.886 71.2739 145.151 67.9525L142.005 66.5587C141.534 68.5156 140.093 69.8799 137.77 69.8799C134.889 69.8799 133.037 67.8046 133.007 64.957H145.562ZM142.326 62.3256H133.488C133.904 60.1301 135.564 58.6047 138.055 58.6047C140.547 58.6047 142.029 60.1907 142.326 62.3256V62.3256ZM127.442 61.8603C127.442 55.4305 123.254 51.1628 116.57 51.1628H108.372V72.5581H116.57C123.254 72.5581 127.442 68.2909 127.442 61.8603V61.8603ZM123.721 62.0928C123.721 66.5499 121.411 69.3023 116.615 69.3023H112.558V54.8837H116.615C121.411 54.8837 123.721 57.6351 123.721 62.0928V62.0928ZM126.047 11.5756V0H121.241V11.5756C121.241 23.9261 112.308 32.89 100 32.89C87.6923 32.89 78.7591 23.9261 78.7591 11.5756V0H73.9535V11.5756C73.9535 26.6981 84.9079 37.6744 100 37.6744C115.092 37.6744 126.047 26.6981 126.047 11.5756V11.5756ZM114.419 11.7379V0H85.5814V11.7379C85.5814 20.5742 91.3762 26.5116 100 26.5116C108.624 26.5116 114.419 20.5742 114.419 11.7379V11.7379ZM109.767 11.511C109.767 17.7 106.116 21.3953 100 21.3953C93.884 21.3953 90.2326 17.7 90.2326 11.511V4.65116H109.767V11.511ZM73.4884 72.5581L66.6942 62.0086L72.3461 55.6081H68.2171L61.2174 63.4609V51.1628H57.6744V72.5581H61.2174V68.2018L64.2928 64.7349L69.1539 72.5581H73.4884ZM50.4719 72.6678H53.9535C53.7217 71.7187 53.5765 70.5321 53.5765 69.0202V61.0728C53.5765 57.3656 51.0814 55.3488 46.9324 55.3488C43.2188 55.3488 40.8399 56.9207 39.6211 59.5895L42.4932 61.6956C43.0157 59.5308 44.5535 58.4925 46.8164 58.4925C48.9343 58.4925 50.2109 59.4419 50.2109 61.2506V61.6655L46.033 62.3479C41.3037 63.119 39.0698 64.957 39.0698 68.0709C39.0698 71.0363 41.3037 73.0233 44.6982 73.0233C47.0195 73.0233 48.9632 72.0453 50.2109 70.2947C50.2109 71.0363 50.298 71.8964 50.4719 72.6678V72.6678ZM50.2326 65.8343C50.2326 68.1994 47.7372 70.2326 45.1216 70.2326C43.3776 70.2326 42.3256 69.3225 42.3256 68.0176C42.3256 66.5317 43.6785 65.7125 47.0759 65.1668L50.2326 64.6512V65.8343ZM37.1903 64.957C37.4844 58.8786 34.3383 55.3488 29.3398 55.3488C24.3411 55.3488 20.9302 58.8191 20.9302 64.1867C20.9302 69.5241 24.3411 73.0233 29.3398 73.0233C32.8384 73.0233 35.5142 71.2739 36.7789 67.9525L33.6326 66.5587C33.162 68.5156 31.7211 69.8799 29.3982 69.8799C26.5168 69.8799 24.6645 67.8046 24.6349 64.957H37.1903ZM33.4884 62.3256H24.6512C25.0663 60.1301 26.7269 58.6047 29.2181 58.6047C31.7092 58.6047 33.1916 60.1907 33.4884 62.3256V62.3256ZM19.0698 61.8603C19.0698 55.4305 14.8816 51.1628 8.19837 51.1628H0V72.5581H8.19837C14.8816 72.5581 19.0698 68.2909 19.0698 61.8603V61.8603ZM14.8837 62.0928C14.8837 66.5499 12.5742 69.3023 7.7776 69.3023H3.72093V54.8837H7.7776C12.5742 54.8837 14.8837 57.6351 14.8837 62.0928V62.0928ZM75.3488 53.9535H79.0698V50.2326H75.3488V53.9535ZM75.3488 72.5581H79.0698V55.814H75.3488V72.5581ZM86.3079 55.7033H82.7907V72.5581H86.3079V65.0442C86.3079 61.1245 88.2559 58.4726 91.1334 58.4726C93.3137 58.4726 94.6219 59.8872 94.6219 62.5985V72.5581H98.1395V61.8318C98.1395 57.9131 95.93 55.3488 92.1511 55.3488C89.7383 55.3488 87.6745 56.3809 86.3079 58.2369V55.7033Z"
+                        fill="#333670"
+                      ></path></svg
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    style="color: rgb(51, 53, 112); font-weight: 500"
+                    >For Patients</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    style="color: rgb(51, 53, 112); font-weight: 500"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="d-flex justify-content-center" style="margin: 0 0 0 0">
+        <div
+          style="
+            height: 400px;
+            width: 500px;
+            position: relative;
+            margin: 10em 0 0 20em;
+          "
+        >
+          <div>
+            <p
+              style="color: rgb(255, 99, 64); font-size: 16px; font-weight: 500"
+            >
+              Dentist in Canberra
+            </p>
+            <p
+              style="color: rgb(51, 53, 112); font-size: 45px; font-weight: 500"
+            >
+              We’re a local dental practice passionate about treating our
+              patients like family. <br />
+              <span style="color: rgb(255, 99, 64)">Oh, and flossing!</span>
+            </p>
+            <button
+              style="
+                background-color: transparent;
+                border: 2px solid rgb(51, 53, 112);
+                height: 40px;
+                width: 220px;
+                border-radius: 20px;
+                margin-top: 2em;
+              "
+            >
+              Organise your visit
+              <svg
+                class="icon-teeth"
+                width="24"
+                height="14"
+                viewBox="0 0 24 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g class="teeth-top">
+                  <path
+                    d="M21.61 0V1.08046C21.61 2.09139 20.8365 2.79751 19.7288 2.79751C18.6211 2.79751 17.8475 2.09139 17.8475 1.08046V0.764363V0H16.2575V0.764363V1.08046V1.84483C16.2575 2.85583 15.4839 3.56188 14.3763 3.56188C13.2686 3.56188 12.4951 2.85583 12.4951 1.84483V0H10.905V1.84483C10.905 2.85583 10.1314 3.56188 9.02374 3.56188C7.91605 3.56188 7.14251 2.85583 7.14251 1.84483V1.08046V0.764363V0H5.55249V0.764363V1.08046C5.55249 2.09139 4.77894 2.79751 3.67126 2.79751C2.56357 2.79751 1.79003 2.09139 1.79003 1.08046V0H0.200012V1.08046C0.200012 2.8792 1.69232 4.23564 3.67126 4.23564C4.58806 4.23564 5.40001 3.94413 6.00787 3.45279C6.59522 4.39275 7.70028 5 9.02374 5C10.124 5 11.0734 4.58028 11.7 3.89868C12.3266 4.58028 13.276 5 14.3763 5C15.6997 5 16.8048 4.39275 17.3921 3.45279C18.0001 3.94413 18.812 4.23564 19.7288 4.23564C21.7077 4.23564 23.2 2.8792 23.2 1.08046V0H21.61Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <g class="teeth-bottom">
+                  <path
+                    d="M2.39001 14V12.9195C2.39001 11.9086 3.16355 11.2025 4.27123 11.2025C5.37892 11.2025 6.15246 11.9086 6.15246 12.9195V13.2356V14H7.74248V13.2356V12.9195V12.1552C7.74248 11.1442 8.5161 10.4381 9.62371 10.4381C10.7314 10.4381 11.5049 11.1442 11.5049 12.1552V14H13.095V12.1552C13.095 11.1442 13.8686 10.4381 14.9763 10.4381C16.084 10.4381 16.8575 11.1442 16.8575 12.1552V12.9195V13.2356V14H18.4475V13.2356V12.9195C18.4475 11.9086 19.2211 11.2025 20.3287 11.2025C21.4364 11.2025 22.21 11.9086 22.21 12.9195V14H23.8V12.9195C23.8 11.1208 22.3077 9.76436 20.3287 9.76436C19.4119 9.76436 18.6 10.0559 17.9921 10.5472C17.4048 9.60725 16.2997 9 14.9763 9C13.876 9 12.9266 9.41972 12.3 10.1013C11.6734 9.41972 10.724 9 9.62371 9C8.30026 9 7.1952 9.60725 6.60792 10.5472C5.9999 10.0559 5.18796 9.76436 4.27123 9.76436C2.2923 9.76436 0.799988 11.1208 0.799988 12.9195V14L2.39001 14Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div style="margin: 3em 0 0 0">
+          <img
+            style="margin: 0 0 0 -20em"
+            src="https://www.deakindental.com.au/wp-content/uploads/2021/06/family3.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="fixed-container">
+      <div class="new-look">
+        <div>
+          <div style="margin: 10em 10em; width: 5vw">
+            <p
+              style="
+                color: rgb(253, 229, 230);
+                font-size: 40px;
+                font-weight: 500;
+                width: 400px;
+              "
+            >
+              New look,<br />
+              same care.
+            </p>
+            <p
+              style="
+                color: rgb(253, 229, 230);
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 400;
+                width: 700px;
+              "
+            >
+              Deakin Dental has undergone a renewal. <br />With a new owner on
+              board, your dentist in Canberra has made a few <br />
+              changes. But don’t worry, we’re still offering the same great care
+              and <br />
+              we’re even improving things to make life easier for our patients.
+            </p>
+
+            <div>
+              <p
+                style="
+                  color: rgb(253, 229, 230);
+                  font-size: 16px;
+                  line-height: 30px;
+                  font-weight: 400;
+                  width: 300px;
+                "
+              >
+                Tell me more <i class="fa-solid fa-arrow-right"></i>
+              </p>
+              <p
+                style="
+                  color: rgb(253, 229, 230);
+                  font-size: 16px;
+                  line-height: 30px;
+                  font-weight: 400;
+                  width: 300px;
+                "
+              >
+                Abous Us <i class="fa-solid fa-arrow-right"></i>
+              </p>
+              <p
+                style="
+                  color: rgb(253, 229, 230);
+                  font-size: 16px;
+                  line-height: 30px;
+                  font-weight: 400;
+                  width: 300px;
+                "
+              >
+                Treatements <i class="fa-solid fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://www.deakindental.com.au/wp-content/uploads/2019/09/DD_14-1338x1000.jpg"
+              style="
+                height: 700px;
+                width: 700px;
+                object-fit: cover;
+                margin: 10em 0 0 10em;
+              "
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
